@@ -35,7 +35,11 @@ WRITE -> write(), writelines()
 #     print(fh.read())
 #     fh.write("\nIntuit")
 
-with open('myfile.txt','w+') as fo:
-    fo.writelines(['Python\n','AIML\n','BigData\n','Devops\n','Cloud'])
-    fo.seek(0,0)
-    print(fo.read())
+# with open('myfile.txt','w+') as fo:
+#     fo.writelines(['Python\n','AIML\n','BigData\n','Devops\n','Cloud'])
+#     fo.seek(0,0)
+#     print(fo.read())
+
+with open(r'C:\Users\RaghulRamesh\OneDrive\Pictures\puppy.jpg','rb') as fo:
+    with open(r'C:\Users\RaghulRamesh\OneDrive\Pictures\puppy2.jpg', 'wb') as wfo:
+        wfo.writelines(fo.readlines())
